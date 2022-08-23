@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+<a href="/save" >Add Student</a><br><br>
+<table border="1">
+            <thead>
+                <th>ID </th>
+                <th> <a href="/sort/name">Name</a></th>
+            <th> Action </th>
+
+
+            </thead>
+            <tbody>
+                {% for student in student_list %}
+                <tr>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+
+                    <td><a href="/edit/{{student.id}}"> EDIT </a>|
+                        <a href="/delete/{{student.id}}">DELETE</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+</body>
+{{result}}
+</html>
